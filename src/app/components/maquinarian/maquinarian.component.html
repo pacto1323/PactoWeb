@@ -1,0 +1,208 @@
+<!--NAVBAR-->
+<app-navbar></app-navbar>
+<!--MODAL-->
+<!-- ADD Modal HTML -->
+<!-- ADD Modal HTML -->
+<div id="addMaquinaria" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="was-validated" [formGroup]="maquinariasForm" (ngSubmit)="enviar(maquinariasForm.value)">
+				<div class="modal-header">
+					<h4 class="modal-title">Nueva Maquinaria</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label><b>Nombre:</b></label>
+						<input type="text"  class="form-control" formControlName="nom_maq" required>
+						<div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
+					</div>
+					<div class="form-group">
+                        <label><b>Tipo:</b></label>
+                        <select class="form-control" id="sel1" formControlName="tipo_maq" required>
+                          <option>Vehículo</option>
+                          <option>Cortadora</option>
+                          <option>Moledora</option>
+                          <option>Empacadora</option>
+						</select>
+						<div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
+                      </div> 
+                      <div class="form-group">
+                        <label><b>Estado:</b></label>
+                        <select class="form-control" id="sel1" formControlName="est_maq" required>
+                          <option>Funcional</option>
+                          <option>Averiado</option>
+                          <option>Nuevo</option>
+                          <option>Usado</option>
+						  <option>No Funcional</option>
+						</select>
+						<div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
+                      </div>
+					  <div class="form-group">
+						<label><b>Marca:</b></label>
+						<input type="text" class="form-control" formControlName="marca_maq" required>
+						<div class="invalid-feedback" role="alert">
+							Campo requerido
+						</div>
+                    </div>
+          			<div class="form-group">
+						<label><b>Kilometraje:</b></label>
+						<input type="number" min="1" class="form-control" formControlName="km_maq" required>
+          			</div>
+          			<div class="form-group">
+						<label><b>Placa:</b></label>
+						<input type="text" class="form-control" formControlName="placa_maq" required>
+						<div class="invalid-feedback" role="alert">
+							Campo requerido
+						</div>
+          			</div>
+          			<div class="form-group">
+						<label><b>Origen:</b></label>
+						<input type="text" class="form-control" formControlName="origen_maq" required>
+						<div class="invalid-feedback" role="alert">
+							Campo requerido
+						</div>
+          			</div> 
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-success" value="Agregar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--Editar-->
+<div id="editMaquinarian" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="was-validated" [formGroup]="maquinariasForm" (ngSubmit)="enviar(maquinariasForm.value)">
+				<div class="modal-header">
+					<h4 class="modal-title">Editar Maquinaria</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label><b>Nombre:</b></label>
+						<input type="text"  class="form-control" formControlName="nom_maq" disabled>
+						
+					</div>
+					<div class="form-group">
+                        <label><b>Tipo:</b></label>
+                        <select class="form-control" id="sel1" formControlName="tipo_maq" disabled>
+                          <option>Vehículo</option>
+                          <option>Cortadora</option>
+                          <option>Moledora</option>
+                          <option>Empacadora</option>
+						</select>
+						
+                      </div> 
+                      <div class="form-group">
+                        <label><b>Estado:</b></label>
+                        <select class="form-control" id="sel1" formControlName="est_maq" required>
+                          <option>Funcional</option>
+                          <option>Averiado</option>
+                          <option>Nuevo</option>
+                          <option>Usado</option>
+						  <option>No Funcional</option>
+						</select>
+						<div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
+                      </div>
+					  <div class="form-group">
+						<label><b>Marca:</b></label>
+						<input type="text" class="form-control" formControlName="marca_maq" disabled>
+						
+                    </div>
+          			<div class="form-group">
+						<label><b>Kilometraje:</b></label>
+						<input type="number" min="1" class="form-control" formControlName="km_maq" disabled>
+          			</div>
+          			<div class="form-group">
+						<label><b>Placa:</b></label>
+						<input type="text" class="form-control" formControlName="placa_maq" disabled>
+						
+          			</div>
+          			<div class="form-group">
+						<label><b>Origen:</b></label>
+						<input type="text" class="form-control" formControlName="origen_maq" disabled>
+						
+          			</div> 
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-success" value="Guardar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--TABLA-->
+<div class="container-fluid main-container">
+	<div class="table-title">
+		<div class="row">
+			<h3 class="col-md-10">&nbsp;&nbsp;Maquinaria</h3><br><br>	
+			<div class="col">			
+				<a href="#addMaquinaria" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;<span> Nueva</span></a>
+			</div>		 			
+		</div>
+	</div>
+	<div class="body animated fadeIn">
+		<div class="container-fluid">
+		  <div>
+			<div class="card my-3">
+				<br>
+			  <div class="container-fluid" aria-label="Page navigation example">
+				  <div class="table-responsive">
+					<table  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+						<thead >
+						  <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Tipo</th>                            
+							<th scope="col">Estado</th> 
+							<th scope="col">Marca</th>
+							<th scope="col">Kilometraje</th>
+							<th scope="col">Placa</th> 
+							<th scope="col">Origen</th> 
+							<th scope="col">Opciones</th>                                                    
+						  </tr>
+						</thead>
+						<tbody>
+						    <tr *ngFor="let maquinaria1 of maquinarias">
+								<td>{{maquinaria1.nom_maq}}</td>
+                                <td>{{maquinaria1.tipo_maq}}</td>
+                                <td>{{maquinaria1.est_maq}}</td> 
+								<td>{{maquinaria1.marca_maq}}</td>
+								<td>{{maquinaria1.km_maq}}</td>
+								<td>{{maquinaria1.placa_maq}}</td>
+								<td>{{maquinaria1.origen_maq}}</td>                                              
+                                <td><!-- Default checkbox -->
+                                    <div align="center">
+										<a href="#editMaquinarian" class="btn btn-outline-warning" data-toggle="modal"><i class="fas fa-edit"></i></a>&nbsp;&nbsp;
+                                        <a [routerLink]="['/mantenimiento/:id']" class="btn btn-outline-success" data-toggle="modal">Mantenimiento</a>
+                                    </div>
+                                </td>					  							  
+							</tr>
+						</tbody>
+                      </table>
+                     
+                    </div>
+				  </div>
+				
+              </div>
+              <div class="row">
+			</div>
+		  </div>
+		</div>
+	  </div>
+</div>
+
+  
+

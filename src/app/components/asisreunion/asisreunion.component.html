@@ -1,0 +1,108 @@
+<!--NAVBAR-->
+<app-navbar></app-navbar>
+<!--MODAL-->
+<!-- ADD Modal HTML -->
+<div id="addAsistencia" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form  >
+				<div class="modal-header">
+					<h4 class="modal-title">Nueva Asistencia</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+				<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>Socio:</b></label>
+							<select class="custom-select" id="sel1" formControlName="id_soc" required>
+								<option></option>
+							<option >adminute</option>
+							<option >adminutpl</option>
+							<option >Prueba</option>
+							</select>
+							
+						</div>
+					</div>
+						<div class="form-group ">
+							<label><b>Asistencia:</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+							<label></label>
+							<label></label>
+							<input type="checkbox" class="form-check-input" >
+						</div>
+						
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-success" value="Agregar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!--TABLA-->
+<div class="container-fluid main-container">
+	<div class="table-title">
+		<div class="row">
+			<h3 class="col-md-10">&nbsp;&nbsp;Asistencia Reunión</h3><br><br>	
+			<div class="col">			
+				<a href="#addAsistencia" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;<span> Nueva</span></a>
+			</div>	 			
+		</div>
+	</div>
+	<div class="body animated fadeIn">
+		<div class="container-fluid">
+		  <div>
+			<div class="card my-3"><br>
+				<br>
+			  <div class="container-fluid" aria-label="Page navigation example">
+				  <div class="table-responsive">
+					<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+						<thead >
+						  <tr>
+                            <th scope="col">Nombre</th>
+							<th scope="col">Apellido</th>
+							<th scope="col">Asistencia</th>                                                   
+						  </tr>
+						</thead>
+						<tbody>
+						    <tr>
+                            
+                                <td>adminute</td>
+                                <td>Jueves</td>
+                                <td>SI</td>
+													  							  
+							</tr>
+							<tr>
+                            
+                                <td>adminutpl</td>
+                                <td>prueba</td>
+                                <td>SI</td>
+													  							  
+							</tr>
+							<tr>
+                            
+                                <td>Prueba</td>
+                                <td>Hoy</td>
+                                <td>NO</td>
+													  							  
+							</tr>
+						</tbody>
+                      </table>
+                     
+                    </div>
+				  </div>
+				
+              </div>
+              <div class="row">
+                       		 
+               
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+</div>
+
+  
+

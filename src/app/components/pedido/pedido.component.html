@@ -1,0 +1,114 @@
+<!--NAVBAR-->
+<app-navbar></app-navbar>
+<!--MODAL-->
+<!-- ADD Modal HTML -->
+
+<div id="addPedido" class="modal fade" tabindex="-1" role="dialog" style="text-align: center;">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<form class="was-validated" [formGroup]="productosForm" (ngSubmit)="enviar(productosForm.value)">
+
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col"> Categoria </th>
+							<th scope="col"> Producto </th>
+							<th scope="col"> Precio</th>
+							<th scope="col"> Cantidad</th>
+							<th scope="col"> Subtotal</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let persona of personas">
+                            <td>{{persona.categoria}}</td>
+                            <td>{{persona.producto}}</td>
+                            <td>{{val1}}</td>
+                            <td>{{val2}}</td>
+							<td>{{rta}}</td>
+                            
+                        </tr>
+					</tbody>
+				</table>
+			</form>
+
+			<label><b>Fecha:</b></label>
+
+			<input type="date" id="fechaActual" value="" ><br>
+
+			<label for="sel1"><b>Categoría:</b></label>
+
+			<input type="text" class="form-control"name="categoria"[(ngModel)]="persona.categoria"/><br>
+
+			
+
+			<label><b>Producto:</b></label>
+			<input type="text" class="form-control"name="producto"[(ngModel)]="persona.producto"/><br>
+			<label><b>Precio:</b></label>
+			<input type="number" class="form-control" id="val1" [(ngModel)]="val1"><br/>
+			<label><b>Cantidad:</b></label>
+			<input type="number" class="form-control" id="val2" [(ngModel)]="val2"><br/>
+			<label><b>Subtotal:</b></label>
+			<input type="number" class="form-control" id="rta" [(ngModel)]="rta"><br/>
+			<br>
+			<br>
+
+			<div class="form-group" >
+				<button class="btn btn-primary" (click)="operacion()"> Calcular </button>
+				<input type="button" class="btn btn-success" value="Registrar Pedido" (click)="guardar()"/>
+				<button class="btn btn-primary" (click)="fecha()"> Fecha Actual </button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- tabla principal -->
+	
+<div class="body animated fadeIn">
+	<div class="container-fluid">
+		<div>
+			<br>
+            <div class="row">
+				<div class="col-md-10">
+                    <h3>&nbsp;&nbsp;Pedidos</h3>
+                </div>
+                <div class="col">
+                    <a href="#addPedido" class="btn btn-success" data-toggle="modal"><i class="fas fa-plus-square">
+					</i>&nbsp;&nbsp;<span>Agregar Pedido</span></a>
+                </div>
+			</div>
+			<div class="card my-3">
+				<br>
+				<div class="container-fluid table-responsive" aria-label="Page navigation example">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th scope="col"> N# </th>
+								<th scope="col"> </th>
+								<th scope="col"> id_fac</th>
+								<th scope="col"> </th>
+								<th scope="col"> Fecha</th>
+								<th scope="col"> </th>
+								<th scope="col"> Total</th>
+								<th scope="col"> </th>
+								<th scope="col"> Descargar Factura</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td></td>
+								<td>123456</td>
+								<td></td>
+								<td>24/11/2020</td>
+								<td></td>
+								<td>1000</td>
+								<td></td>
+								<td>Archivo</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

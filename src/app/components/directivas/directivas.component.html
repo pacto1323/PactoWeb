@@ -1,0 +1,164 @@
+<app-navbar></app-navbar>
+
+<div id="addDirectivas" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="directivasForm" (ngSubmit)="enviar(directivasForm.value)">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Nueva Directiva</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><b>Cargo:</b></label>
+                        <input type="text" class="form-control" required formControlName="cargo_dir">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Nombre:</b></label>
+                        <input type="text" class="form-control" required formControlName="nom_dir">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Apellido:</b></label>
+                        <input type="text" class="form-control" required formControlName="ape_dir">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Periodo:</b></label>
+                        <input type="text" class="form-control" required formControlName="periodo_dir">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label><b>Asociacion:</b></label
+                        ><br />
+                        <select
+                          type="option"
+                          class="form-control"
+                          required
+                          formControlName="id_soc"
+                        >
+                          <option>Ninguna</option>
+                          <option
+                            *ngFor="let asociacion of asociaciones"
+                            value="{{ asociacion._id }}"
+                          >
+                            {{ asociacion.nombre_aso }}
+                          </option>
+                        </select>
+                      </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                    <input type="submit" class="btn btn-success" value="Agregar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="editDirectivas" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form (ngSubmit)="onEdit( f )" #f="ngForm">
+                <div class="modal-header">
+                    <h4 class="modal-title">Nueva Directiva</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><b>Cargo:</b></label>
+                        <input [(ngModel)]="directivaUpdate.cargo_dir" type="text" class="form-control" required name="cargo_dir">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Nombre:</b></label>
+                        <input [(ngModel)]="directivaUpdate.nom_dir" type="text" class="form-control" required name="nom_dir">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Apellido:</b></label>
+                        <input [(ngModel)]="directivaUpdate.ape_dir" type="text" class="form-control" required name="ape_dir">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Periodo:</b></label>
+                        <input [(ngModel)]="directivaUpdate.periodo_dir" type="text" class="form-control" required name="periodo_dir">
+                    </div>
+
+                    <div class="form-group">
+                        <label><b>Asociacion:</b></label>
+                        <td scope="col" class="text-center" *ngFor="let asociacion of directiva1.id_asociacion">
+                            <span>{{ asociacion.id_soc.nombre_aso }}</span>
+                        </td>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                    <input type="submit" class="btn btn-success" value="Agregar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="deleteDirectivas" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form (ngSubmit)="delete()">
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar Directiva</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Esta seguro que quieres eliminar?</p>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-danger" value="Eliminar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="body animated fadeIn">
+    <div class="container-fluid">
+        <div>
+            <br>
+            <div class="row">
+                <h3 class="col-md-10">&nbsp;&nbsp;Directivas</h3>
+                <a class="btn btn-success" data-toggle="modal" href="#addDirectivas"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;<span>Agregar</span></a>
+            </div>
+            <div class="card my-3">
+                <br>
+                <div class="container-fluid table-responsive" aria-label="Page navigation example">
+                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cargo</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Periodo</th>
+                                <th scope="col">Asociacion</th>
+                                <th scope="col">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let directiva1 of directivas">
+                                <td>{{directiva1.cargo_dir}}</td>
+                                <td>{{directiva1.nom_dir}}</td>
+                                <td>{{directiva1.ape_dir}}</td>
+                                <td>{{directiva1.periodo_dir}}</td>
+                                <!--td *ngFor="let asociacion of directiva1.id_asociacion">{{asociacion.id_asociacion.["nombre_aso"]}}</td-->
+                                <td>
+                                    <button type="button" class="btn btn-outline-warning" href="#editDirectivas" data-toggle="modal" (click)="openModalActualizar(usuario._id)"><i class="fas fa-edit"></i></button>&nbsp;
+                                    <button type="button" class="btn btn-outline-danger" href="#deleteDirectivas" data-toggle="modal" (click)="openModalActualizar(usuario._id)"><i class="far fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
