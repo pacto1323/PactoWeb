@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { DirectivasModel, Directiva} from '../models/directivas.models';
-import { Asociacion} from '../models/asociaciones.models';
+import { Directiva } from '../models/directivas.models';
+
 @Injectable({
     providedIn: 'root'
 })
 export class DirectivasService{
-
-    directivas: Directiva[] = [];
 
     private url:string = 'https://restserver-pacto.herokuapp.com';
 

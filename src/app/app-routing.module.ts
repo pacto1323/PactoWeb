@@ -18,7 +18,6 @@ import { MaquinarianComponent } from './components/maquinarian/maquinarian.compo
 import { MantenimientoComponent } from './components/mantenimiento/mantenimiento.component';
 import { MaquinariaasoComponent } from './components/maquinariaaso/maquinariaaso.component';
 import { MantenimientoasoComponent } from './components/mantenimientoaso/mantenimientoaso.component';
-import { HojacampoComponent } from './components/hojacampo/hojacampo.component';
 import { AsociacionesComponent } from './components/asociaciones/asociaciones.component';
 import { DethojacampoComponent } from './components/dethojacampo/dethojacampo.component';
 import { DirectivasComponent } from './components/directivas/directivas.component';
@@ -42,8 +41,7 @@ const APP_ROUTES: Routes = [
     { path: 'mantenimiento/:id',component: MantenimientoComponent,canActivate: [AuthGuard] },
     { path: 'maquinariaaso',component: MaquinariaasoComponent,canActivate: [AuthGuard] },
     { path: 'mantenimientoaso/:id',component: MantenimientoasoComponent,canActivate: [AuthGuard] },
-    { path: 'hojacampo',component: HojacampoComponent,canActivate: [AuthGuard] },
-    { path: 'dethojacampo/:id',component: DethojacampoComponent,canActivate: [AuthGuard] },
+    { path: 'dethojacampo',component: DethojacampoComponent,canActivate: [AuthGuard] },
     { path: 'asociacion', component: AsociacionesComponent, canActivate: [AuthGuard] },
     { path: 'directiva', component: DirectivasComponent, canActivate: [AuthGuard] },
     

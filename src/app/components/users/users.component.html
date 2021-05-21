@@ -11,27 +11,27 @@
                 <div class="modal-body">
                     <div class="form-group row">
                         <div class="col">
-                        <label for="sel1"><b>Rol:</b></label>
-                        <select class="custom-select" id="sel1"  formControlName="role" required>
-                            <option selected disabled>Escoja un Rol</option>
-                            <option>ADMIN_ROLE</option>
-                            <option>SOCIO_ROLE</option>
-                            <option>CLIENTE_ROLE</option>
-                        </select>
-                        <div class="invalid-feedback" role="alert" *ngIf="usersForm.get('nombre').touched">
-                            Campo requerido
+                            <label for="sel1"><b>Rol:</b></label>
+                            <select class="custom-select" id="sel1"  formControlName="role" required>
+                                <option selected disabled>Escoja un Rol</option>
+                                <option>ADMIN_ROLE</option>
+                                <option>SOCIO_ROLE</option>
+                                <option>CLIENTE_ROLE</option>
+                            </select>
+                            <div class="invalid-feedback" role="alert" *ngIf="usersForm.get('nombre').touched">
+                                Campo requerido
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="sel1"><b>Asociación:</b></label>
+                            <select class="custom-select" id="sel1" formControlName="id_soc" required>
+                                <option *ngFor="let asociacion of asociaciones" [value]="asociacion._id">{{asociacion.nombre_aso}}</option>
+                            </select>
+                            <div class="invalid-feedback" role="alert" *ngIf="usersForm.get('id_soc').touched">
+                                Campo requerido
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <label for="sel1"><b>Asociación:</b></label>
-                        <select class="custom-select" id="sel1" formControlName="id_soc" required>
-                            <option *ngFor="let asociacion of asociaciones" [value]="asociacion._id">{{asociacion.nombre_aso}}</option>
-                        </select>
-                        <div class="invalid-feedback" role="alert" *ngIf="usersForm.get('id_soc').touched">
-                            Campo requerido
-                        </div>
-                      </div>
-                </div>
                     <div class="form-group row">
                         <div class="col">
                             <label><b>Nombre:</b></label>
@@ -242,7 +242,7 @@
                                 <td>{{usuario.email}}</td>
                                 <td *ngFor="let asociacion of usuario.id_asociacion">{{asociacion.id_asociacion["nombre_aso"]}}</td>
                                 
- 
+
                                 <td>
                                     <button type="button" class="btn btn-outline-warning" href="#editUser" (click)="openModalActualizar(usuario._id)" data-toggle="modal"><i class="fas fa-edit"></i></button>&nbsp;
                                     <button type="button" class="btn btn-outline-danger" href="#deleteUser" (click)="openModalActualizar(usuario._id)" data-toggle="modal"><i class="far fa-trash-alt"></i></button>

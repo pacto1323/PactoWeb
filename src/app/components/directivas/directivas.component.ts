@@ -61,14 +61,10 @@ export class DirectivasComponent implements OnDestroy,OnInit {
 
     this._directivasService.getAso().subscribe((res:any) =>{
       this.asociaciones= res.asociacion;
-      //console.log(this.asociaciones);
-      //this.dtTrigger.next();
     });
 
     this._userService.getUsers().subscribe((resp:any) => {
       this.usuarios = resp.usuarios;
-      //console.log(this.usuarios);
-      //this.dtTrigger.next();
     });
   }
 
@@ -79,16 +75,14 @@ export class DirectivasComponent implements OnDestroy,OnInit {
     this.directiva1.periodo_dir = values['periodo_dir'];
     this.directiva1.id_asociacion=[{
       _id: this.usuarios[0]._id,
-      id_asociacion: values['id_soc']
+      id_asociacion: values['id_asociacion']
     }];
     
     this._directivasService.addDirectivas(this.directiva1).subscribe((resp:any) => {
       this.directivas = resp.directiva1;
-      //console.log(resp.directivas);
       window.location.reload()
       
     }, (err) => {
-      //console.log(err);
     });
   }
 
