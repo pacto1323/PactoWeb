@@ -1,7 +1,4 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
-import { LoginService } from '../../services/login.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { DirectivasService } from 'src/app/services/directivas.service';
 import { DirectivasModel, Directiva} from '../../models/directivas.models';
 import { AsociacionesModel, Asociacion} from '../../models/asociaciones.models';

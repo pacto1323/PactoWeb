@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { NgxPaginationModule } from 'ngx-pagination';
 
-
 //Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';

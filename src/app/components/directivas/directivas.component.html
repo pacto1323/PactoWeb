@@ -4,7 +4,6 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <form [formGroup]="directivasForm" (ngSubmit)="enviar(directivasForm.value)">
-
                 <div class="modal-header">
                     <h4 class="modal-title">Nueva Directiva</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -97,14 +96,12 @@
                         <label><b>Periodo:</b></label>
                         <input [(ngModel)]="directivaUpdate.periodo_dir" type="text" class="form-control" required name="periodo_dir">
                     </div>
-
                     <div class="form-group">
                         <label><b>Asociacion:</b></label>
                         <td scope="col" class="text-center" *ngFor="let asociacion of directiva1.id_asociacion">
                             <span>{{ asociacion.nombre_aso }}</span>
                         </td>
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">

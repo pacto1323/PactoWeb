@@ -22,17 +22,16 @@ import { AsociacionesComponent } from './components/asociaciones/asociaciones.co
 import { DethojacampoComponent } from './components/dethojacampo/dethojacampo.component';
 import { DirectivasComponent } from './components/directivas/directivas.component';
 
-
 const APP_ROUTES: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
     { path: 'productos',component: ProductosComponent, canActivate: [AuthGuard] },
     { path: 'prodsocio',component: ProdsocioComponent, canActivate: [AuthGuard] },
-    { path: 'capacitacion',component:CapacitacionComponent },
+    { path: 'capacitacion',component:CapacitacionComponent, canActivate: [AuthGuard] },
     { path: 'asiscapacitacion/:id',component:AsiscapacitacionComponent,canActivate: [AuthGuard] },
     { path: 'entidad',component:EntidadComponent,canActivate: [AuthGuard] },
     { path: 'pedido',component: PedidoComponent,canActivate: [AuthGuard] },
-    { path: 'detallepedido/:id',component: DetallepedidoComponent,canActivate: [AuthGuard] },
+    { path: 'detallepedido',component: DetallepedidoComponent,canActivate: [AuthGuard] },
     { path: 'pedidoadmin',component: PedidoadminComponent,canActivate: [AuthGuard] },
     { path: 'bodega',component: BodegaComponent,canActivate: [AuthGuard] },
     { path: 'reunion',component: ReunionComponent,canActivate: [AuthGuard] } ,
@@ -41,7 +40,11 @@ const APP_ROUTES: Routes = [
     { path: 'mantenimiento/:id',component: MantenimientoComponent,canActivate: [AuthGuard] },
     { path: 'maquinariaaso',component: MaquinariaasoComponent,canActivate: [AuthGuard] },
     { path: 'mantenimientoaso/:id',component: MantenimientoasoComponent,canActivate: [AuthGuard] },
+<<<<<<< Updated upstream
     { path: 'dethojacampo',component: DethojacampoComponent,canActivate: [AuthGuard] },
+=======
+    { path: 'dethojacampo/:id',component: DethojacampoComponent,canActivate: [AuthGuard] },
+>>>>>>> Stashed changes
     { path: 'asociacion', component: AsociacionesComponent, canActivate: [AuthGuard] },
     { path: 'directiva', component: DirectivasComponent, canActivate: [AuthGuard] },
     
