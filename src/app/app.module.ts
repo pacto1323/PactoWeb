@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { NgxPaginationModule } from 'ngx-pagination';
 
-
 //Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -23,7 +22,6 @@ import { MaquinarianComponent } from './components/maquinarian/maquinarian.compo
 import { MantenimientoComponent } from './components/mantenimiento/mantenimiento.component';
 import { MaquinariaasoComponent } from './components/maquinariaaso/maquinariaaso.component';
 import { MantenimientoasoComponent } from './components/mantenimientoaso/mantenimientoaso.component';
-import { HojacampoComponent } from './components/hojacampo/hojacampo.component';
 import { DataTablesModule } from 'angular-datatables';
 
 // Routes
@@ -61,7 +59,6 @@ PdfMakeWrapper.setFonts(pdfFonts);
     MantenimientoComponent,
     MaquinariaasoComponent,
     MantenimientoasoComponent,
-    HojacampoComponent,
     DethojacampoComponent,
     AsociacionesComponent,
     ProdsocioComponent,

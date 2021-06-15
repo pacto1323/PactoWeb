@@ -1,253 +1,379 @@
-<br>
-<br>
+<<<<<<< Updated upstream
+<app-navbar></app-navbar><br><br>
+=======
+<app-navbar></app-navbar>
+>>>>>>> Stashed changes
 <div class="body animated fadeIn">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10">
-                <h3>&nbsp;&nbsp;Detalle Hoja de Campo</h3>
-            </div>
-            <div class="col">
-                <a [routerLink]="['/hojacampo']" routerLinkActive="router-link-active"  class="edit btn btn-danger" data-toggle="modal">Regresar</a>
+                <h3>&nbsp;&nbsp;Hoja de Campo</h3>
             </div>
         </div>
+<<<<<<< Updated upstream
+        <div class="card my-3"><br>
+=======
         <div class="card my-3">
             <br>
-            <form>
-                <div class="container-fluid">
-                    <div class="form-group row">
-                        <div class="col">
-                            <label for="sel1"><b>Dia:</b></label>
-                            <select class="form-control" id="sel1" formControlName="dias_det">
-                                <option>Lunes</option>
-                                <option>Martes</option>
-                                <option>Miercoles</option>
-                                <option>Jueves</option>
-                                <option>Viernes</option>
-                                <option>Sábado</option>
-                                <option>Domingo</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <label><b>Descripcion:</b></label>
-                            <input type="text" class="form-control" required formControlName="des_det">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Preparación del suelo</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Preparación de la semilla</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Siembra</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Resiembra</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Deshierve</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Aporque</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Limite de Deshoje</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Elaboración de abosoli</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Aplicación de abono</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Control de Plaga</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Control de enfermedad</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Mantenimiento de Finca</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Cosecha</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Acarreo de transporte</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Descarga</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Calibración de Mantenimiento</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Molienda</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Filtrado</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Melada</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Clarificada</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Punteo</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Batido</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Tamizado</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Empacado</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Codificado</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Limite de módulo</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Desinfección de módulo</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Registro de venta</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Llenado de Contabilidad</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Capacitación</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Comercialización</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Subjornal</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Costo de jornada</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Costo de mano de obra</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Mano de obra familiar</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Total de mano de obra</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Combustible</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Transporte</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Mantenimiento</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Cana</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Total de labores de cultivo</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Trapiche y Horno</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <label><b>Tina y Utensillos</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Infraestructura</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                        <div class="col">
-                            <label><b>Total de Equipo y Maquinaria</b></label>
-                            <input type="text" class="form-control" required formControlName="">
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                    <input type="submit" class="btn btn-success" value="Agregar">
-                </div>
-            </form>
+>>>>>>> Stashed changes
+            <div class="container-fluid table-responsive" aria-label="Page navigation example">
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+                    <thead>
+                        <th class="table-th" colspan="3">Cuaderno de campo de productores organicos</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="col">
+                                <thead>
+                                    <tr>
+                                        <th class="table-th" colspan="3">Datos Generales</th>
+                                        <th class="table-th" colspan="14">Labores Culturales Agricolas</th>
+                                        <th class="table-th" colspan="14">Labores de transformación</th>
+                                        <th class="table-th" colspan="4">Labores de Gestión de la línea</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="col">Día</td>
+                                        <td scope="col">Fecha</td>
+                                        <td scope="col">N° de trabajadores</td>
+                                        <td scope="col">Preparación de suelo</td>
+                                        <td scope="col">Preparación de semilla</td>
+                                        <td scope="col">Siembra</td>
+                                        <td scope="col">Resiembra</td>
+                                        <td scope="col">Deshierbe</td>
+                                        <td scope="col">Aporque</td>
+                                        <td scope="col">Limpieza y deshoje</td>
+                                        <td scope="col">Elaboración de abonos solidos</td>
+                                        <td scope="col">Elaboración de abonos líquidos</td>
+                                        <td scope="col">Aplicación de abonos</td>
+                                        <td scope="col">Control de plagas</td>
+                                        <td scope="col">Control de enfermedades</td>
+                                        <td scope="col">Mantenimiento de la finca</td>
+                                        <td scope="col">Cosecha</td>
+                                        <td scope="col">Acarreo o Transporte</td>
+                                        <td scope="col">Descarga</td>
+                                        <td scope="col">Calibración y Mantenimiento de los Equipos</td>
+                                        <td scope="col">Molienda</td>
+                                        <td scope="col">Filtrado</td>
+                                        <td scope="col">Melada</td>
+                                        <td scope="col">Clarificada</td>
+                                        <td scope="col">Punteo</td>
+                                        <td scope="col">Batido</td>
+                                        <td scope="col">Tamizado</td>
+                                        <td scope="col">Empacado</td>
+                                        <td scope="col">Codificado</td>
+                                        <td scope="col">Limpieza de módulo</td>
+                                        <td scope="col">Desinfección del módulo</td>
+                                        <td scope="col">Registro de Ventas</td>
+                                        <td scope="col">Llenado de Contabilidad</td>
+                                        <td scope="col">Capacitación</td>
+                                        <td scope="col">Comercialización</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col">Domingo</td>
+                                        <td scope="col">16-05-2021</td>
+                                        <td scope="col">
+                                            <input type="text" class="form-control" required formControlName="">
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                        <td scope="col">
+                                            <select class="custom-select" id="sel1"  formControlName="" required>
+                                                <option selected disabled>Escoja</option>
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><br>
+            <div class="container-fluid table-responsive" aria-label="Page navigation example">
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <td class="table-th" scope="col">Subtotal Jornales</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Costo de combustible/ Leña</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col"  colspan="2">Costo de depresiación de Equipos y Maquinaria</td>
+                        </tr>
+                        <tr>
+                            <td class="table-th" scope="col">Costo del Jornal</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Costo de Transporte</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Trapiche y Horno</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-th" scope="col">Costo de Mano de Obra</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Costo de Mantenimiento</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Tinas y Utencillos</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-th" scope="col">Costo de Mano de Obra familiar</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Costo de la Caña</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                            <td class="table-th" scope="col">Infraestructura</td>
+                            <td scope="col">
+                                <input type="text" class="form-control" required formControlName="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-th" scope="col">Total</td>
+                            <td scope="col"></td>
+                            <td class="table-th" scope="col">Total</td>
+                            <td scope="col"></td>
+                            <td scope="col">Total</td>
+                            <td scope="col"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

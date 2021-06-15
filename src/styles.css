@@ -142,3 +142,12 @@ background-color: #7a9e35;
     color: #777;
   }
 }
+
+.txt-vertical{
+  writing-mode: vertical-lr;
+  transform: rotate(270deg);
+}
+
+.table-th {
+  text-align:center;
+}

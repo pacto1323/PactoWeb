@@ -4,49 +4,53 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <form [formGroup]="directivasForm" (ngSubmit)="enviar(directivasForm.value)">
-
                 <div class="modal-header">
                     <h4 class="modal-title">Nueva Directiva</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label><b>Cargo:</b></label>
-                        <input type="text" class="form-control" required formControlName="cargo_dir">
+                        <label for="sel1"><b>Cargo:</b></label>
+                        <select class="custom-select" id="sel1"  formControlName="cargo_dir" required>
+                            <option selected disabled>Escoja un cargo</option>
+                            <option>Presidente</option>
+                            <option>Vicepresidente</option>
+                            <option>Secretario/a</option>
+                            <option>Tesorero/a</option>
+                        </select>
+                        <div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label><b>Nombre:</b></label>
-                        <input type="text" class="form-control" required formControlName="nom_dir">
+                        <label for="sel1"><b>Nombre:</b></label>
+                        <select class="custom-select" id="sel1" formControlName="nom_dir" required>
+                            <option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario.nombre}}</option>
+                        </select>
+                        <div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label><b>Apellido:</b></label>
-                        <input type="text" class="form-control" required formControlName="ape_dir">
+                        <label for="sel1"><b>Apellido:</b></label>
+                        <select class="custom-select" id="sel1" formControlName="ape_dir" required>
+                            <option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario.apellido}}</option>
+                        </select>
+                        <div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
                     </div>
                     <div class="form-group">
                         <label><b>Periodo:</b></label>
                         <input type="text" class="form-control" required formControlName="periodo_dir">
                     </div>
-
-
                     <div class="form-group">
-                        <label><b>Asociacion:</b></label
-                        ><br />
-                        <select
-                          type="option"
-                          class="form-control"
-                          required
-                          formControlName="id_soc"
-                        >
-                          <option>Ninguna</option>
-                          <option
-                            *ngFor="let asociacion of asociaciones"
-                            value="{{ asociacion._id }}"
-                          >
-                            {{ asociacion.nombre_aso }}
-                          </option>
+                        <label><b>Asociacion:</b></label><br />
+                        <select type="option" class="form-control" required formControlName="id_asociacion">
+                            <option>Ninguna</option>
+                            <option *ngFor="let asociacion of asociaciones" value="asociacion._id">{{ asociacion.nombre_aso }}</option>
                         </select>
-                      </div>
-
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -71,25 +75,33 @@
                         <input [(ngModel)]="directivaUpdate.cargo_dir" type="text" class="form-control" required name="cargo_dir">
                     </div>
                     <div class="form-group">
-                        <label><b>Nombre:</b></label>
-                        <input [(ngModel)]="directivaUpdate.nom_dir" type="text" class="form-control" required name="nom_dir">
+                        <label for="sel1"><b>Nombre:</b></label>
+                        <select class="custom-select" id="sel1" [(ngModel)]="directivaUpdate.nom_dir" required name="nom_dir">
+                            <option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario.nombre}}</option>
+                        </select>
+                        <div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label><b>Apellido:</b></label>
-                        <input [(ngModel)]="directivaUpdate.ape_dir" type="text" class="form-control" required name="ape_dir">
+                        <label for="sel1"><b>Apellido:</b></label>
+                        <select class="custom-select" id="sel1" [(ngModel)]="directivaUpdate.ape_dir" required name="ape_dir">
+                            <option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario.apellido}}</option>
+                        </select>
+                        <div class="invalid-feedback" role="alert">
+                            Campo requerido
+                        </div>
                     </div>
                     <div class="form-group">
                         <label><b>Periodo:</b></label>
                         <input [(ngModel)]="directivaUpdate.periodo_dir" type="text" class="form-control" required name="periodo_dir">
                     </div>
-
                     <div class="form-group">
                         <label><b>Asociacion:</b></label>
                         <td scope="col" class="text-center" *ngFor="let asociacion of directiva1.id_asociacion">
-                            <span>{{ asociacion.id_soc.nombre_aso }}</span>
+                            <span>{{ asociacion.nombre_aso }}</span>
                         </td>
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -139,17 +151,15 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
                                 <th scope="col">Periodo</th>
-                                <th scope="col">Asociacion</th>
                                 <th scope="col">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let directiva1 of directivas">
-                                <td>{{directiva1.cargo_dir}}</td>
+                            <tr >
+                                <td>Directivo</td>
                                 <td>{{directiva1.nom_dir}}</td>
                                 <td>{{directiva1.ape_dir}}</td>
                                 <td>{{directiva1.periodo_dir}}</td>
-                                <!--td *ngFor="let asociacion of directiva1.id_asociacion">{{asociacion.id_asociacion.["nombre_aso"]}}</td-->
                                 <td>
                                     <button type="button" class="btn btn-outline-warning" href="#editDirectivas" data-toggle="modal" (click)="openModalActualizar(usuario._id)"><i class="fas fa-edit"></i></button>&nbsp;
                                     <button type="button" class="btn btn-outline-danger" href="#deleteDirectivas" data-toggle="modal" (click)="openModalActualizar(usuario._id)"><i class="far fa-trash-alt"></i></button>
